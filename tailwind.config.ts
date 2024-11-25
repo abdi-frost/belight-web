@@ -1,18 +1,25 @@
-import type { Config } from "tailwindcss";
-
-export default {
+import daisyui from 'daisyui'
+module.exports = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+
+    // Or if using `src` directory:
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: '#013580',
+        primary2: '#16478C',
+        primary3: '#1B4581',
+        primarylight: '#B4C5D9',
+        secondary: '#F79619',
+        secondary2: '#FFD41A',
+        customblack: '#1A1A1A',
       },
     },
   },
-  plugins: [],
-} satisfies Config;
+  plugins: [daisyui],
+}
