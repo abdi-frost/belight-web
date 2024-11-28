@@ -5,6 +5,7 @@ export default function About() {
     <div>
       <VisionComponent />
       <MissionComponent />
+      <TeamSection />
     </div>
   )
 }
@@ -78,6 +79,72 @@ const MissionComponent = () => {
             <p className="text-2xl md:text-6xl text-primary mt-2 font-bold">13</p>
           </div>
         </div>
+      </div>
+    </div>
+  );
+};
+
+const TeamSection = () => {
+  const teamMembers = [
+    {
+      name: "Mahbubur Rahman",
+      title: "Front End Developer",
+      image: "/person.png", // Replace with your image path
+    },
+    {
+      name: "Tanvir Ahmed",
+      title: "Product Designer",
+      image: "/person.png", // Replace with your image path
+    },
+    {
+      name: "Sakib Sharier",
+      title: "Workflow Developer",
+      image: "/person.png", // Replace with your image path
+    },
+    {
+      name: "Rifat Shikder",
+      title: "WP Developer",
+      image: "/person.png", // Replace with your image path
+    },
+    {
+      name: "Mahbubur Rahman",
+      title: "Front End Developer",
+      image: "/person.png", // Replace with your image path
+    },
+    {
+      name: "Tanvir Ahmed",
+      title: "Product Designer",
+      image: "/person.png", // Replace with your image path
+    },
+    {
+      name: "Sakib Sharier",
+      title: "Workflow Developer",
+      image: "/person.png", // Replace with your image path
+    },
+    {
+      name: "Rifat Shikder",
+      title: "WP Developer",
+      image: "/person.png", // Replace with your image path
+    },
+  ];
+
+  return (
+    <div className="container mx-auto px-4 md:px-12 lg:px-16 py-12">
+      <h2 className="text-3xl font-bold text-center mb-8">Our Team</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        {teamMembers.map((member, index) => (
+          <div key={index} className="bg-white rounded-lg pb-4 shadow-md text-center">
+            <Image
+              src={member.image}
+              alt={member.name}
+              className="w-full h-66 object-cover rounded-t-lg"
+              width={300}
+              height={300}
+            />
+            <h3 className="mt-4 text-lg font-semibold">{member.name}</h3>
+            <p className="text-gray-600">{member.title}</p>
+          </div>
+        ))}
       </div>
     </div>
   );
