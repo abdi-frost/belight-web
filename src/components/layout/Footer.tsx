@@ -1,8 +1,9 @@
+import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react'
 import Link from 'next/link'
 
 export default function Footer() {
     return (
-        <footer className="container bg-customblack text-slate-200">
+        <footer className="w-full bg-customblack text-slate-200">
             <Newsletter />
             <Content />
         </footer>
@@ -11,7 +12,7 @@ export default function Footer() {
 
 function Newsletter() {
     return (
-        <div className="container mx-auto flex flex-col items-center justify-center gap-6 bg-primary py-12 px-4 sm:px-6 lg:px-8 text-center">
+        <div className="w-full mx-auto flex flex-col items-center justify-center gap-6 bg-primary py-12 px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold text-white">Subscribe to The Newsletter.</h2>
             <p className="md:text-lg sm:w-5/6 md:w-2/3 lg:w-1/2 text-primarylight">
                 Subscribe is an option offered by product vendors or service providers that allows customers.
@@ -37,7 +38,12 @@ function Content() {
                 <div>
                     <span className="footer-title text-lg md:text-xl">BeLight</span>
                     <span className="">Software Development and Digital Marketing Agency in Ethiopia.</span>
-                    <span className="">Social Media</span>
+                    <div className="mt-4 text-secondary2 flex gap-3 justify-center md:justify-start">
+                        <Facebook />
+                        <Instagram />
+                        <Twitter />
+                        <Linkedin />
+                    </div>
                 </div>
 
                 <div>
