@@ -40,8 +40,8 @@ function Hero() {
             </button>
           </div>
 
-          <div className="lg:w-1/2 flex gap-4 max-h-[480px] relative">
-            <div className="flex flex-col gap-2">
+          <div className="w-full lg:w-1/2 flex gap-4 max-h-[480px] relative">
+            <div className="w-2/5 flex flex-col gap-2">
               <div className="w-full h-full rounded-xl overflow-hidden">
                 <Image
                   src="/hero1.png"
@@ -63,7 +63,7 @@ function Hero() {
                 />
               </div>
             </div>
-            <div className="rounded-xl overflow-hidden">
+            <div className="w-full rounded-xl overflow-hidden">
               <Image
                 src="/hero2.png"
                 alt="Professional at work"

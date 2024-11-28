@@ -9,7 +9,7 @@ interface ServiceCardProps {
 
 export default function ServiceCard(prop: ServiceCardProps) {
     return (
-        <div className="flex flex-col px-8 py-16 rounded-md shadow-lg shadow-primary/15 bg-white">
+        <div className="flex flex-col px-8 py-10 md:py-16 rounded-md shadow-lg shadow-primary/15 bg-white">
             <div className="flex justify-center items-center my-2">
                 <Image src={serviceImage} alt="Service Icon" width={100} height={100} className="content-fit" />
             </div>
