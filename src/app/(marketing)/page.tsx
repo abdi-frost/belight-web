@@ -1,8 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import { useState } from "react";
 import Image from "next/image";
 import serviceImage from "../../../public/service.png";
 import ServiceCard from "./components/ServiceCard";
+
 
 export default function Home() {
   return (
@@ -18,7 +20,7 @@ export default function Home() {
 function Hero() {
   return (
     <div className="relative">
-      <div className="container mx-auto px-4 py-8 md:px-20 md:py-20 md:my-10">
+      <div className="mx-auto px-4 py-8 md:px-20 md:py-20 md:my-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:max-h-96">
           <div className="lg:w-1/2">
             <div className="flex items-center gap-2 mb-4">
@@ -133,7 +135,7 @@ function Services() {
   ];
 
   return (
-    <div className="bg-slate-100">
+    <div className="">
       <div className="container mx-auto p-10 md:px-20 md:py-26">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 lg:gap-10">
           {services.map((service) => (
@@ -150,138 +152,87 @@ function Services() {
 function Testimonials() {
   const testimonials = [
     {
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua incididunt ut labore et dolore magna aliqua.",
-      author: "John Doe",
-      company: "ABC Corp",
-      location: "New York, USA",
-      image: "https://via.placeholder.com/150"
+      text: "Working with this team has been an absolute game-changer for our business. Their innovative solutions and dedicated support have helped us achieve unprecedented growth.",
+      author: "Sarah Chen",
+      company: "Innovate Tech",
+      location: "Singapore",
+      image: "/person.png"
     },
     {
-      text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      author: "Jane Smith",
-      company: "XYZ Inc",
-      location: "San Francisco, USA",
-      image: "https://via.placeholder.com/150"
+      text: "The level of professionalism and expertise they bring to the table is unmatched. Our productivity has increased by 200% since implementing their solutions.",
+      author: "James Wilson",
+      company: "Digital Dynamics",
+      location: "London, UK",
+      image: "/person.png"
     },
     {
-      text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-      author: "Alice Johnson",
-      company: "Tech Solutions",
-      location: "Austin, USA",
-      image: "https://via.placeholder.com/150"
-    },
-    {
-      text: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      author: "Bob Brown",
-      company: "Innovate Now",
-      location: "Miami, USA",
-      image: "https://via.placeholder.com/150"
-    },
-    {
-      text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-      author: "Alice Johnson",
-      company: "Tech Solutions",
-      location: "Austin, USA",
-      image: "https://via.placeholder.com/150"
-    },
-    {
-      text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-      author: "Alice Johnson",
-      company: "Tech Solutions",
-      location: "Austin, USA",
-      image: "https://via.placeholder.com/150"
-    },
-    {
-      text: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      author: "Bob Brown",
-      company: "Innovate Now",
-      location: "Miami, USA",
-      image: "https://via.placeholder.com/150"
-    },
-    {
-      text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-      author: "Alice Johnson",
-      company: "Tech Solutions",
-      location: "Austin, USA",
-      image: "https://via.placeholder.com/150"
-    },
-    {
-      text: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      author: "Bob Brown",
-      company: "Innovate Now",
-      location: "Miami, USA",
-      image: "https://via.placeholder.com/150"
-    },
-    // Add more testimonials as needed
+      text: "Outstanding service and exceptional results. They don't just deliver solutions; they become a valuable partner in your business journey.",
+      author: "Maria Rodriguez",
+      company: "Global Solutions",
+      location: "Madrid, Spain",
+      image: "/person.png"
+    }
   ];
 
-  const TestimonialCarousel = () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const itemsToShow = 3;
+  return (
+    <div className="container bg-primarylight mx-auto p-10 md:px-20 md:py-26">
+      <div className="container mx-auto px-4 py-16">
+        <div className="flex items-center gap-2 mb-4">
+          <div className="w-10 h-[2px] bg-primary"></div>
+          <p className="text-primary font-medium">Testimonials</p>
+        </div>
 
-    const prevTestimonial = () => {
-      setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length);
-    };
+        <h1 className="text-4xl font-bold mb-6 text-primary-1">
+          What Our Clients Say
+        </h1>
 
-    const nextTestimonial = () => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-    };
+        <p className="text-lg text-primary-2 mb-12 max-w-2xl">
+          Discover how we&apos;ve helped businesses transform their operations and achieve remarkable success.
+        </p>
 
-    return (
-      <div className="relative w-full mx-auto px-4 py-8">
-        <button
-          onClick={prevTestimonial}
-          className="absolute -left-2 top-1/2 transform -translate-y-1/2 p-2 transition font-bold text-lg text-primary"
-        >
-          &#8592;
-        </button>
-        <div className="flex overflow-hidden">
-          {testimonials.slice(currentIndex, currentIndex + itemsToShow).map((testimonial, index) => (
-            <div key={index} className="p-2 transition-transform duration-500 ease-in-out w-1/3">
-              <div className="card bg-white rounded-md p-6 h-full">
-                <p className="text-lg mb-4">{testimonial.text}</p>
-                <div className="flex items-center mt-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {testimonials.map((testimonial, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 relative overflow-hidden"
+            >
+              {/* Decorative element */}
+              <div className={`absolute top-0 right-0 w-32 h-32 -mr-16 -mt-16 rounded-full 
+                ${index === 0 ? 'bg-primary/10' :
+                  index === 1 ? 'bg-secondary-1/10' : 'bg-secondary-2/10'}`}
+              ></div>
+
+              <div className="relative z-10 h-full flex flex-col justify-between">
+                {/* Quote icon */}
+                <svg className="w-10 h-10 text-primary-2/20 mb-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                </svg>
+
+                <p className="text-primary-2 mb-6 leading-relaxed">
+                  {testimonial.text}
+                </p>
+
+                <div className="flex items-center">
                   <Image
                     src={testimonial.image}
                     alt={testimonial.author}
-                    className="w-16 h-16 rounded-full mr-4"
-                    width={64}
-                    height={64}
+                    className="w-12 h-12 rounded-full mr-4"
+                    width={48}
+                    height={48}
                   />
-                  <div className="">
-                    <p className="font-bold">{testimonial.author}</p>
-                    <p className="text-sm text-gray-600">{testimonial.company}, {testimonial.location}</p>
+                  <div>
+                    <p className="font-bold text-primary-1">{testimonial.author}</p>
+                    <p className="text-sm text-primary-2">
+                      {testimonial.company}
+                      <span className="mx-2">•</span>
+                      {testimonial.location}
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
           ))}
         </div>
-        <button
-          onClick={nextTestimonial}
-          className="absolute -right-2 top-1/2 transform -translate-y-1/2 p-2 transition font-bold text-lg text-primary rounded-full"
-        >
-          &#8594;
-        </button>
-      </div>
-    );
-  };
-
-  return (
-    <div className="bg-primarylight">
-      <div className="container mx-auto px-4 py-8 md:px-20 md:py-16">
-        <div className="flex items-center gap-2 mb-4">
-          <div className="w-10 h-[2px] bg-blue-700"></div>
-          <p className="text-md">Testimonials</p>
-        </div>
-        <h1 className="text-2xl md:text-4xl font-bold mb-6">
-          Customers Talk About Us
-        </h1>
-        <p className="text-md text-gray-700 mb-8 md:w-3/5">
-          Customer support represents the resources within your company that provide technical assistance
-          to consumers after they purchase a product or service.
-        </p>
-        <TestimonialCarousel />
       </div>
     </div>
   );
