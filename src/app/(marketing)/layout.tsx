@@ -2,13 +2,14 @@ import { Inter } from 'next/font/google'
 import '@/app/globals.css'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
+import { Metadata } from 'next'
 
 const inter = Inter({
   subsets: ['latin'],
   weight: ['400', '600', '700']
 })
 
-export const meta = {
+export const metadata: Metadata = {
   title: {
     default: 'BeLight',
     template: '%s | BeLight'
