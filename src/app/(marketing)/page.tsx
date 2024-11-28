@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
-import { useState } from "react";
 import Image from "next/image";
 import serviceImage from "../../../public/service.png";
 import ServiceCard from "./components/ServiceCard";
