@@ -3,7 +3,7 @@ import { Facebook, InstagramIcon, Linkedin, Twitter } from 'lucide-react';
 
 const ContactPage = () => {
   return (
-    <div className="container mx-auto px-4 sm:px-6 md:px-16 lg:px-32 py-8 sm:py-12 md:py-16">
+    <div className="mx-auto px-4 sm:px-4 md:px-18 lg:px-28 py-8 sm:py-12 md:py-16">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Left Side: Info Section */}
         <div className="bg-primary text-slate-100 rounded-lg p-6 md:p-12">
