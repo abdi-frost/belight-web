@@ -106,7 +106,7 @@ const ContactPage = () => {
             <div className="w-full flex justify-end">
               <button
                 type="submit"
-                className="ml-auto mt-4 px-4 bg-primary text-white py-2 rounded-md hover:bg-blue-700"
+                className="btn ml-auto mt-4 px-4 bg-primary text-white py-2 rounded-md hover:bg-blue-700"
               >
                 Send Message
               </button>
