@@ -2,13 +2,14 @@ import { Inter } from 'next/font/google'
 import Sidebar from '@/components/admin/Sidebar'
 import AdminHeader from '@/components/admin/AdminHeader'
 import '@/app/globals.css'
+import { Metadata } from 'next'
 
 const inter = Inter({
     subsets: ['latin'],
     weight: ['400', '600', '700']
 })
 
-export const meta  = {
+export const metadata: Metadata = {
     title: {
         default: 'Admin Dashboard | BeLight',
         template: '%s | Admin Dashboard'
