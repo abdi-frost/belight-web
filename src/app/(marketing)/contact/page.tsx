@@ -51,7 +51,7 @@ const ContactPage = () => {
         <div className="bg-white rounded-lg shadow-md p-6">
           <h2 className="text-2xl font-bold mb-4">Get in Touch</h2>
           <form>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700">First Name</label>
                 <input
@@ -85,7 +85,7 @@ const ContactPage = () => {
                   placeholder="+102 3456 789"
                 />
               </div>
-              <div>
+              <div className="">
                 <label className="block text-sm font-medium text-gray-700">Business Size</label>
                 <select className="mt-1 p-2 border border-gray-300 rounded-md w-full">
                   <option>Select Your Business Size</option>
@@ -106,7 +106,7 @@ const ContactPage = () => {
             <div className="w-full flex justify-end">
               <button
                 type="submit"
-                className="ml-auto mt-4 px-4 bg-primary text-white font-bold py-2 rounded-md hover:bg-blue-700"
+                className="ml-auto mt-4 px-4 bg-primary text-white py-2 rounded-md hover:bg-blue-700"
               >
                 Send Message
               </button>
