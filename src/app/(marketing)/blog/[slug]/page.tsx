@@ -130,7 +130,7 @@ export default async function BlogPostDetail({ params }: { params: Params }) {
                         {posts.slice(0, 2).map((post) => (
                             <Link
                                 key={post.id}
-                                href={`/educational-resource/${post.slug}`}
+                                href={`/blog/${post.slug}`}
                                 className="group block bg-surface p-4 rounded-lg hover:shadow-md transition-shadow duration-200"
                             >
                                 <h4 className="text-lg font-semibold text-primary group-hover:text-primary-dark mb-2">
