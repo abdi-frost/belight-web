@@ -43,6 +43,24 @@ const VisionComponent = () => {
         <div className="relative overflow-hidden border">
           <Image src="/vision.png" alt="Image" width={500} height={500} className="w-full object-cover" />
         </div>
+        <div className="absolute -top-20 -right-24 -z-10">
+          <Image
+            src="/decoration2.png"
+            alt="Curvy decoration"
+            width={160}
+            height={160}
+            className="object-cover"
+          />
+        </div>
+        <div className="absolute -bottom-24 -left-20 -z-10">
+          <Image
+            src="/circledecoration.png"
+            alt="Curvy decoration"
+            width={200}
+            height={200}
+            className="object-cover"
+          />
+        </div>
       </div>
     </div>
   );
@@ -54,6 +72,15 @@ const MissionComponent = () => {
       <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-none lg:px-0">
         <div className="relative overflow-hidden border">
           <Image src="/vision.png" alt="Image" width={500} height={500} className="w-full object-cover" />
+        </div>
+        <div className="absolute -bottom-24 -left-20 -z-10">
+          <Image
+            src="/circledecoration.png"
+            alt="Curvy decoration"
+            width={200}
+            height={200}
+            className="object-cover"
+          />
         </div>
       </div>
       <div className="md:w-1/2 md:pl-10">
