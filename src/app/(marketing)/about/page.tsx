@@ -73,15 +73,6 @@ const MissionComponent = () => {
         <div className="relative overflow-hidden border">
           <Image src="/vision.png" alt="Image" width={500} height={500} className="w-full object-cover" />
         </div>
-        <div className="absolute -bottom-24 -left-20 -z-10">
-          <Image
-            src="/circledecoration.png"
-            alt="Curvy decoration"
-            width={200}
-            height={200}
-            className="object-cover"
-          />
-        </div>
       </div>
       <div className="md:w-1/2 md:pl-10">
         <h2 className="text-3xl md:text-6xl my-3 md:mb-8 font-semibold mb-4">Vision of Our Company</h2>
